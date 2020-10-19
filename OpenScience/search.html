@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Open Science Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav style="background-color:White;" class="navbar navbar-static-top" role="navigation">
+        <div  class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"><img src="sc2.png" height = "45" width = "210">
+            </div>
+            <h3 style="position:absolute;top:-3%;left:40%;color:black"> Open Science Project </h3>
+
+            <!-- Navbar links -->
+            <div style="float:Right;" class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                  <li>
+                      <a style="color:black" href="index.html">Search</a>
+                  </li>
+                  <li>
+                      <a style="color:black" href="search.html">Projects</a>
+                  </li>
+                  <li>
+                      <a style="color:black" href="contact.html">Submit</a>
+                  </li>
+
+
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+<div class="container-fluid">
+
+		<!-- Left Column -->
+		<div class="col-sm-3">
+
+			<!-- List-Group Panel -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h1 class="panel-title"><span class="glyphicon glyphicon-random"></span> Refine Your Results</h1>
+				</div>
+				<div class="list-group">
+          <a href="#" class="list-group-item"><label for="Type">Resource Type:</label>
+
+            <select name="cars" id="cars">
+              <option value="Empty">Blank</option>
+              <option value="Book">Book</option>
+              <option value="Journals">Journals</option>
+              <option value="News">News</option>
+              <option value="Articles">Articles</option>
+            </select></a>
+					<a href="#" class="list-group-item"><label for="Disc">Discipline:</label>
+
+            <select name="cars" id="cars">
+              <option value="Empty">Blank</option>
+              <option value="Biology and Medicine">Biology and Medicine</option>
+              <option value="Data">Data</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Physics">Physics</option>
+            </select></a>
+					<a href="#" class="list-group-item"><div>
+  <input type="range" id="volume" name="volume"
+         min="0" max="11">
+  <label for="volume">Publication Year</label>
+</div></select></a>
+          <a href="#" class="list-group-item" style ="text-align:Center">Search</a>
+
+				</div>
+			</div>
+
+      <script>
+          $(function () {
+              $("#slider-range").slider({
+                  range: true,
+                  min: new Date('2010.01.01').getTime() / 1000,
+                  max: new Date('2014.01.01').getTime() / 1000,
+                  step: 86400,
+                  values: [new Date('2013.01.01').getTime() / 1000, new Date('2013.02.01').getTime() / 1000],
+                  slide: function (event, ui) {
+                      $("#amount").val((new Date(ui.values[0] * 1000).toDateString()) + " - " + (new Date(ui.values[1] * 1000)).toDateString());
+                  }
+              });
+              $("#amount").val((new Date($("#slider-range").slider("values", 0) * 1000).toDateString()) +
+                  " - " + (new Date($("#slider-range").slider("values", 1) * 1000)).toDateString());
+          });
+      </script>
+
+
+
+
+
+		</div><!--/Left Column-->
+
+
+		<!-- Center Column -->
+		<div class="col-sm-6">
+
+
+
+			<!-- Articles -->
+			<div class="row">
+				<article class="col-xs-12">
+					<h2>Title</h2>
+          <h5>Authors</h5>
+					<p>Decription</p>
+					<p><button class="btn btn-default">Learn More</button></p>
+					<p class="pull-right"><span class="label label-default">Discipline</span> <span class="label label-default">Publication Year</span> <span class="label label-default">Resource Type</span></p>
+					<ul class="list-inline">
+						<li><a href="#"><span class="glyphicon glyphicon-share"></span> 0 Shares</a></li>
+					</ul>
+				</article>
+			</div>
+			<hr>
+
+		</div><!--/Center Column-->
+
+
+	  <!-- Right Column -->
+	  <div class="col-sm-3">
+
+
+
+
+	  </div><!--/Right Column -->
+
+	</div><!--/container-fluid-->
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+
+</body>
+
+</html>

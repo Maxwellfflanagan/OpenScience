@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Open Science Project</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="search.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav style="background-color:White;" class="navbar navbar-static-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand"><img src="sc2.png" height = "45" width = "210">
+            </div>
+            <h3 style="position:absolute;top:-3%;left:40%;color:black"> Open Science Project </h3>
+
+            <!-- Navbar links -->
+            <div style="float:Right;" class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                  <li>
+                      <a style = "color:black" href="index.html">Search</a>
+                  </li>
+                  <li>
+                      <a style = "color:black" href="search.html">Projects</a>
+                  </li>
+                  <li>
+                      <a style = "color:black" href="contact.html">Submit</a>
+                  </li>
+
+
+
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+
+
+
+
+<div class="header">
+<form>
+  <h1><b> Search for Open Science Projects </b></h1>
+    <div class = "form-box">
+    <input type="text" class="search-field all" placeholder="Any Keywords" id="myInput1" onkeyup="searchfunc()">
+    <input type ="text" class = "search-field year" placeholder="Publication Year" id="myInput2" onkeyup="searchfunc()">
+    <button class = "search-bthn" type="button" onclick="window.location.href = 'search.html'">Search</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<!-- IE10 viewport bug workaround -->
+	<script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<!-- Placeholder Images -->
+	<script src="js/holder.min.js"></script>
+
+</body>
+
+</html>
